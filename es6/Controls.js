@@ -1,13 +1,16 @@
+import Gamepad from './Gamepad.js';
+
 class Controls {
 
     constructor() {
-        this.gamepads = {};
         this.state = {
             left: false,
             right: false,
             up: false,
             down: false
         };
+
+        this.gamepad = new Gamepad();
 
         // setup PC keyboard interaction
         window.addEventListener('keydown', function (e) {
@@ -20,48 +23,14 @@ class Controls {
     }
 
     getState() {
-        this.queryGamepad();
-        return this.state;
-    }
 
-    queryGamepad() {
-        var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
-        for (var i = 0; i < gamepads.length; i++) {
-            var gp = gamepads[i];
-            if (gp) {
-                // UP
-                if (gp.buttons[12].pressed){
-                    this.state.up = true;
-                    console.log('gamepad up');
-                } else {
-                    this.state.up = false;
-                }
-
-                // DOWN
-                if (gp.buttons[13].pressed){
-                    this.state.down = true;
-                    console.log('gamepad down');
-                } else {
-                    this.state.down = false;
-                }
-
-                // RIGHT
-                if (gp.buttons[15].pressed){
-                    this.state.right = true;
-                    console.log('gamepad right');
-                } else {
-                    this.state.right = false;
-                }
-
-                // LEFT
-                if (gp.buttons[14].pressed){
-                    this.state.left = true;
-                    console.log('gamepad left');
-                } else {
-                    this.state.left = false;
-                }
-            }
+        // gamepad will override keyboard if connected
+        if (this.gamepad.connected()) {
+            let gamepadState = this.gamepad.getState();
+            return gamepadState
         }
+
+        return this.state;
     }
 
     changeControls(code, state) {
