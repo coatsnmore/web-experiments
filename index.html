@@ -1,13 +1,28 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script type="text/javascript" src="controller.js" charset="utf-8"></script>
-        <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
 
-        <!--<div id="content"></div>-->
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
 
-        <button onclick="Controller.notify()">Notify Me!</button>
-    </body>
+<body>
+	<script type="text/javascript" src="lib/pixi.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
+	<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+
+	<!--<div id="content"></div>-->
+	<div class="menu">
+		<button onclick="Controller.notify()">Notify Me!</button>
+		<button>Web GL</button>
+		<button>Web Audio</button>
+		<button>Gamepad</button>
+	</div>
+
+	<div id="scene"></div>
+</body>
+
+<footer>♥ from coatsn</footer>
+
 </html>

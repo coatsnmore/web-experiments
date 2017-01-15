@@ -1,8 +1,11 @@
 class EventNotification {
-    static hello() {
-        // if (Notification.permission !== "granted")
-        //     Notification.requestPermission();
-        console.log('hello');
+
+    constructor() {
+        if (Notification.permission !== "granted")
+            Notification.requestPermission();
+    }
+
+    meow() {
         if (!Notification) {
             alert('Desktop notifications not available in your browser. Try Chromium.');
             return;
@@ -11,15 +14,14 @@ class EventNotification {
         if (Notification.permission !== "granted")
             Notification.requestPermission();
         else {
-            var notification = new Notification('Notification title', {
-                icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-                body: "Hey there! You've been notified!",
+            var notification = new Notification('MEOW!!!', {
+                icon: 'http://vignette2.wikia.nocookie.net/rblxofftopic/images/6/67/A_magical_kitten.png/revision/latest?cb=20130730065856',
+                body: "Hey there! You've been notified! Meow!",
             });
 
             notification.onclick = function () {
                 window.open("http://stackoverflow.com/a/13328397/1269037");
             };
-
         }
     }
 }

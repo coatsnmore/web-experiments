@@ -1,18 +1,20 @@
 import EventNotification from './EventNotification.js';
+import Scene from './Scene.js';
 
-
-// request permission on page load
 document.addEventListener('DOMContentLoaded', function () {
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
+
+    let width = document.documentElement.clientWidth;
+    let height = document.documentElement.clientHeight;
+    let eventNotification = new EventNotification();
+    let scene = new Scene('scene', width, 300);
+
+    // start this thang!
+    scene.tick();
+
+    // connect bundled stuff to DOM controller
+    Controller.notify = function () {
+        eventNotification.meow();
+    };
 });
 
 
-// var Controller = {};
-Controller.notify = function (){
-    EventNotification.hello();
-};
-
-// Test.test();
-
-// asdf
