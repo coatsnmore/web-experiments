@@ -1,10 +1,10 @@
 import Player from './Player.js';
-import KeyBoardController from './KeyBoardController.js';
+import Controls from './Controls.js';
 
 class Scene {
 
     constructor(domId, width, height) {
-        this.controls = new KeyBoardController();
+        this.controls = new Controls();
 
         // builds the webgl renderer if available
         this.renderer = new PIXI.autoDetectRenderer(width, height);
@@ -25,8 +25,9 @@ class Scene {
         this.renderer.render(this.stage);
         requestAnimationFrame(this.tick.bind(this));
 
+        // console.log('tick');
         // update positions of objects in scene
-        this.player.update(this.controls.state);
+        this.player.update(this.controls.getState());
     }
 
 }

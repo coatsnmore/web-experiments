@@ -16,4 +16,10 @@ A collection of personal web-related experiments.
 Open browser to http://localhost:8080/webpack-dev-server/.
 
 
-<3 from coatsnmore
+# references
+
+* https://w3c.github.io/gamepad/#remapping
+* https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
+* 
+
+♥ from coatsn
