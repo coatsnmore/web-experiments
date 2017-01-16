@@ -3,5 +3,5 @@ export default {
   '/notification': 'Notification',
   '/webgl': 'WebGL',
   '/audio':'Audio',
-  '/gamepad': 'WebGL'
+  '/gamepad': 'Gamepad'
 }

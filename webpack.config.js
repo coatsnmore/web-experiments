@@ -21,13 +21,6 @@ module.exports = {
                 loader: 'babel',
                 exclude: /node_modules/
             }
-            // {
-            //     loader: 'babel-loader',
-            //     test: path.join(__dirname, 'es6'),
-            //     query: {
-            //         presets: 'es2015',
-            //     },
-            // }
         ]
     },
     plugins: [
