@@ -7,15 +7,27 @@ module.exports = {
         path: __dirname,
         filename: 'bundle.js'
     },
+    resolveLoader: {
+        root: path.join(__dirname, 'node_modules'),
+    },
     module: {
         loaders: [
             {
-                loader: 'babel-loader',
-                test: path.join(__dirname, 'es6'),
-                query: {
-                  presets: 'es2015',
-                },
+                test: /\.vue$/,
+                loader: 'vue'
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                exclude: /node_modules/
             }
+            // {
+            //     loader: 'babel-loader',
+            //     test: path.join(__dirname, 'es6'),
+            //     query: {
+            //         presets: 'es2015',
+            //     },
+            // }
         ]
     },
     plugins: [

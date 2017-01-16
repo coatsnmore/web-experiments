@@ -1,4 +1,4 @@
-import Gamepad from './Gamepad.js';
+import Gamepad from '../gamepad/Gamepad';
 
 class Controls {
 

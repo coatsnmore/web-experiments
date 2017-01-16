@@ -1,4 +1,4 @@
-import Notes from './Notes.js';
+import Notes from './Notes';
 
 class Synth {
 

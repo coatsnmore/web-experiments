@@ -2,28 +2,16 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<script type="text/javascript" src="lib/vue.js" charset="utf-8"></script>
+	<script type="text/javascript" src="lib/p2.js" charset="utf-8"></script>
+	<script type="text/javascript" src="lib/pixi.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="bundle.js" charset="utf-8" async></script>
 </head>
 
 <body>
-	<script type="text/javascript" src="lib/p2.js" charset="utf-8"></script>
-	<script type="text/javascript" src="lib/pixi.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
-	<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
-
-	<!--<div id="content"></div>-->
-	<div class="menu">
-		<button onclick="Controller.notify()">Notify Me!</button>
-		<button>Web GL</button>
-		<button onclick="Controller.playSong()">Web Audio</button>
-		<button>Gamepad</button>
-	</div>
-
-	<div id="scene"></div>
+	<div id="app" />
 </body>
-
-<footer>♥ from coatsn</footer>
 
 </html>

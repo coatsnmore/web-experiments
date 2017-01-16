@@ -1,6 +1,6 @@
-import Player from './Player.js';
-import Controls from './Controls.js';
-import World from './World.js';
+import Player from './Player';
+import Controls from './Controls';
+import World from './World';
 
 class Scene {
 
