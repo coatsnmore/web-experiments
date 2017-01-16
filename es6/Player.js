@@ -4,7 +4,7 @@ class Player {
         this.size = size;
         this.graphics(x, y);
         this.body(x, y);
-        this.speed = 50;
+        this.speed = 100;
         this.turnSpeed = 2;
         // this.shape();
     }
