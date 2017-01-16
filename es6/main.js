@@ -5,11 +5,11 @@ import Synth from './Synth.js';
 // wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function () {
 
-    let width = document.documentElement.clientWidth;
-    let height = document.documentElement.clientHeight;
-    let eventNotification = new EventNotification();
-    let scene = new Scene('scene', width, 300);
-    let synth = new Synth();
+    // let width = document.documentElement.clientWidth,
+    //     height = document.documentElement.clientHeight,
+        let eventNotification = new EventNotification(),
+        scene = new Scene('scene', 600, 300),
+        synth = new Synth();
 
     // start this thang!
     scene.tick();

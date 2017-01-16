@@ -5,12 +5,11 @@ class Synth {
     constructor() {
         this.notes = Notes.all();
         // var context = {};
-        var ContextClass = (window.AudioContext ||
+        let ContextClass = (window.AudioContext ||
             window.webkitAudioContext ||
             window.mozAudioContext ||
             window.oAudioContext ||
-            window.msAudioContext),
-            buffer, thisSynth = this;
+            window.msAudioContext);
         if (ContextClass) {
             // Web Audio API is available.
             this.context = new ContextClass();
@@ -20,7 +19,7 @@ class Synth {
     }
 
     playSong() {
-        var duration = 0.5,
+        let duration = 0.5,
             startTime = this.context.currentTime,
             song = ['G3', 'A#3/Bb3', 'D#4/Eb4', 'G3', 'A#3/Bb3', 'G#3/Ab3', 'G3'],
             // song = ['G3', 'G3', 'G3', 'G3', 'G3', 'G#3/Ab3', 'G3'],
@@ -35,7 +34,7 @@ class Synth {
     }
 
     play(note, startTime, duration, type, volumeLevel) {
-        var osc1 = this.context.createOscillator(),
+        let osc1 = this.context.createOscillator(),
             osc2 = this.context.createOscillator(),
             volume = this.context.createGain(),
             frequency = this.notes[note];
