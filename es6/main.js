@@ -5,15 +5,19 @@ const app = new Vue({
   data: {
     currentRoute: window.location.pathname
   },
+  created: function () {
+    // initial lifecycle event
+  },
   computed: {
-    ViewComponent () {
-      const matchingView = routes[this.currentRoute]
+    ViewComponent() {
+      let matchingView = routes[this.currentRoute];
+      //TODO fix uri matching or change to hashes
       return matchingView
         ? require('./pages/' + matchingView + '.vue')
         : require('./pages/404.vue')
     }
   },
-  render (h) {
+  render(h) {
     return h(this.ViewComponent)
   }
 })

@@ -1,0 +1,12 @@
+{
+  "node": true,
+  "esnext": true,
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "PIXI": true,
+    "window": true,
+    "Vue": true,
+    "navigator": true
+  }
+}

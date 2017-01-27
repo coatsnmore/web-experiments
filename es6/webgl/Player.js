@@ -117,6 +117,9 @@ class Player {
         }
     }
 
+    /**
+     * Basic Controls for testing.
+     */
     basicContols(controls) {
         if (controls.left) {
             this.graphics.x--;
