@@ -4,14 +4,28 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="lib/vue.js" charset="utf-8"></script>
+	<script type="text/javascript" src="lib/vue-router.js" charset="utf-8"></script>
 	<script type="text/javascript" src="lib/p2.js" charset="utf-8"></script>
 	<script type="text/javascript" src="lib/pixi.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="bundle.js" charset="utf-8" async></script>
 </head>
 
-<body>
-	<div id="app" />
-</body>
+<div id="app" class="container">
+	<ul>
+		<li>
+			<router-link to="/">Home</router-link>
+			<router-link to="/notification">Notification</router-link>
+			<router-link to="/webgl">WebGL</router-link>
+			<router-link to="/audio">Audio</router-link>
+			<router-link to="/gamepad">Gamepad</router-link>
+		</li>
+	</ul>
+	<div class="section">
+		<router-view></router-view>
+	</div>
+	&#10084; from coatsnmore
+</div>
 
 </html>

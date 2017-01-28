@@ -8,6 +8,7 @@
     "window": true,
     "Vue": true,
     "navigator": true,
-    "Notification": true
+    "Notification": true,
+    "VueRouter": true
   }
 }

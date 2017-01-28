@@ -8,6 +8,7 @@ class EventNotification {
     meow(name) {
 
         let moniker = name || "stranger";
+
         if (!Notification) {
             window.alert('Desktop notifications not available in your browser. Try Chromium.');
             return;
