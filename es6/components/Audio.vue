@@ -42,8 +42,8 @@
 
 		<div>
 			<h4>Controls</h4>
-			<button v-on:click="play">Play!</button>
-			<button v-on:click="clear">Clear</button>
+			<button v-on:click="play" class="button-primary">Play!</button>
+			<button v-on:click="clear" class="button-primary">Clear</button>
 		</div>
 	</div>
 </template>
