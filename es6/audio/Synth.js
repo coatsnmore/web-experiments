@@ -18,10 +18,10 @@ class Synth {
         }
     }
 
-    playSong() {
+    playSong(song) {
         let duration = 0.5,
             startTime = this.context.currentTime,
-            song = ['G3', 'A#3/Bb3', 'D#4/Eb4', 'G3', 'A#3/Bb3', 'G#3/Ab3', 'G3'],
+            // song = ['G3', 'A#3/Bb3', 'D#4/Eb4', 'G3', 'A#3/Bb3', 'G#3/Ab3', 'G3'],
             // song = ['G3', 'G3', 'G3', 'G3', 'G3', 'G#3/Ab3', 'G3'],
             oscillatorType = 'sine',
             masterVolume = 0.1;
