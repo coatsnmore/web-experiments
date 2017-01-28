@@ -5,7 +5,7 @@
 			audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning) and much more.</p>
 
 		<div class="notes">
-      <h4>Notes</h4>
+			<h4>Notes</h4>
 			<button v-on:click="add('G3')">G</button>
 			<button v-on:click="add('G#3/Ab3')">Ab</button>
 			<button v-on:click="add('A#3/Bb3')">Bb</button>
@@ -22,16 +22,28 @@
 		<!--<input v-model="name" placeholder="First and Last Name" />-->
 		<br>
 		<div>
-      <h4>Song</h4>
+			<h4>Song</h4>
 			{{song}}
-      <br>
-      <br>
 		</div>
 
+		<br>
+		<br>
+
 		<div>
-      <h4>Controls</h4>
+			<h4>Oscillators</h4>
+			<button v-on:click="changeOscillator('sine')">Sine</button>
+			<button v-on:click="changeOscillator('square')">Square</button>
+			<button v-on:click="changeOscillator('sawtooth')">Sawtooth</button>
+			<button v-on:click="changeOscillator('triangle')">Triangle</button>
+		</div>
+
+		<br>
+		<br>
+
+		<div>
+			<h4>Controls</h4>
 			<button v-on:click="play">Play!</button>
-      <button v-on:click="clear">Clear</button>
+			<button v-on:click="clear">Clear</button>
 		</div>
 	</div>
 </template>
@@ -46,18 +58,22 @@
     },
      methods: {
       play (){
-          this.synth.playSong(this.song);
+          this.synth.playSong(this.song, this.oscillator);
       },
       add (note){
         this.song.push(note);
       },
       clear (){
         this.song = [];
+      },
+      changeOscillator (osc){
+        this.oscillator = osc;
       }
     },
     data: function (){
       return {
-        song: ['G3', 'A#3/Bb3', 'D#4/Eb4', 'G3', 'A#3/Bb3', 'G#3/Ab3', 'G3']
+        song: ['G3', 'A#3/Bb3', 'D#4/Eb4', 'G3', 'A#3/Bb3', 'G#3/Ab3', 'G3'],
+        oscillator: 'sine'
       }
     }
   }
