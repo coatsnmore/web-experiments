@@ -7,6 +7,7 @@
     "PIXI": true,
     "window": true,
     "Vue": true,
-    "navigator": true
+    "navigator": true,
+    "Notification": true
   }
 }
