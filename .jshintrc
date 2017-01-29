@@ -9,6 +9,8 @@
     "Vue": true,
     "navigator": true,
     "Notification": true,
-    "VueRouter": true
+    "VueRouter": true,
+    "document": true,
+    "p2": true
   }
 }

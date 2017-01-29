@@ -7,7 +7,8 @@ class Controls {
             left: false,
             right: false,
             up: false,
-            down: false
+            down: false,
+            fire: false
         };
 
         this.gamepad = new Gamepad();
@@ -27,7 +28,7 @@ class Controls {
         // gamepad will override keyboard if connected
         if (this.gamepad.connected()) {
             let gamepadState = this.gamepad.getState();
-            return gamepadState
+            return gamepadState;
         }
 
         return this.state;

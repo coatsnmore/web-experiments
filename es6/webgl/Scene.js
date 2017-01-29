@@ -21,7 +21,7 @@ class Scene {
         this.stage = new PIXI.Container();
 
         // add new player to stage
-        this.player = new Player(50, 100, 100);
+        this.player = new Player(50, 100, 100, this.world, this.stage);
         this.stage.addChild(this.player.graphics);
 
         // create world and add physics
@@ -32,13 +32,18 @@ class Scene {
     tick() {
         // draw
         this.renderer.render(this.stage);
-        requestAnimationFrame(this.tick.bind(this));
+        window.requestAnimationFrame(this.tick.bind(this));
 
         // step physics
         this.world.update();
 
         // update positions of objects in scene
         this.player.update(this.controls.getState(), this.width, this.height);
+
+        // handle player fire
+        if(this.controls.getState().fire){
+            this.player.fire(this.stage, this.world);
+        }
     }
 
 }
