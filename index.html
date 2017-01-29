@@ -12,20 +12,23 @@
 	<script type="text/javascript" src="bundle.js" charset="utf-8" async></script>
 </head>
 
-<div id="app" class="container">
-	<ul>
-		<li>
-			<router-link to="/">Home</router-link>
-			<router-link to="/notification">Notification</router-link>
-			<router-link to="/webgl">WebGL</router-link>
-			<router-link to="/audio">Audio</router-link>
-			<router-link to="/gamepad">Gamepad</router-link>
-		</li>
-	</ul>
+<div id="app" class="container nc-button">
+	<!--<ul>
+		<li>-->
+	<div>
+		<!--<div class="logo"><img src="img/cat-small.jpg"></div>-->
+		<router-link to="/" class="button">Home</router-link>
+		<router-link to="/notification" class="button">Notification</router-link>
+		<router-link to="/webgl" class="button">WebGL</router-link>
+		<router-link to="/audio" class="button">Audio</router-link>
+		<router-link to="/gamepad" class="button">Gamepad</router-link>
+	</div>
+	<!--</li>
+	</ul>-->
 	<div class="section">
 		<router-view></router-view>
+		<br> &#10084; from coatsnmore
 	</div>
-	&#10084; from coatsnmore
 </div>
 
 </html>
