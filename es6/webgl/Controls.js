@@ -52,6 +52,9 @@ class Controls {
             case 40:
                 this.state.down = state;
                 break;
+            case 32:
+                this.state.fire = state;
+                break;
         }
     }
 
