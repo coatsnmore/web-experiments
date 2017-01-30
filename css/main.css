@@ -14,3 +14,15 @@
     margin-right: 1em;*/
     margin: 0.5em;
 }
+
+.white-background {
+    background-color: white!important;
+}
+
+.nc-button{
+    background-color: white!important;
+}
+
+/*html {
+    background-color: black;
+}*/
