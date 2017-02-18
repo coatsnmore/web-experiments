@@ -18,7 +18,7 @@ class EventNotification {
             Notification.requestPermission();
         else {
             var notification = new Notification('MEOW!!!', {
-                icon: 'http://vignette2.wikia.nocookie.net/rblxofftopic/images/6/67/A_magical_kitten.png/revision/latest?cb=20130730065856',
+                icon: '../img/A_magical_kitten.png',
                 body: `Hey ${moniker}! You've been notified! Meow!`,
             });
 
